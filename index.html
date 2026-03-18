@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vijayabhaskar V | AI & Data Science</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Fallback fonts if Clash Display unavailable -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Noise -->
+  <canvas class="noise-canvas" id="noiseCanvas"></canvas>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">VB<span class="logo-dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="assets/resume.pdf" target="_blank" class="nav-resume">Resume ↗</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mob-menu" id="mobMenu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-orb o1"></div>
+    <div class="hero-orb o2"></div>
+
+    <div class="hero-left">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span> Open to Opportunities
+      </div>
+      <h1 class="hero-name reveal">
+        Vijaya<br><span class="name-accent">bhaskar V</span>
+      </h1>
+      <div class="hero-role reveal">
+        <span class="role-tag">AI & Data Science</span>
+        <span class="role-sep">·</span>
+        <span class="role-tag">ML Engineer</span>
+        <span class="role-sep">·</span>
+        <span class="role-tag">Data Engineer</span>
+      </div>
+      <p class="hero-bio reveal">
+        Passionate about building intelligent systems, machine learning models,
+        and scalable data-driven applications. I transform raw data into
+        impactful real-world solutions.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn-primary">View My Work <span>→</span></a>
+        <a href="assets/resume.pdf" target="_blank" class="btn-outline">Download CV</a>
+      </div>
+    </div>
+
+    <div class="hero-right reveal-right">
+      <div class="profile-ring r1"></div>
+      <div class="profile-ring r2"></div>
+      <div class="profile-wrap">
+        <img src="assets/profile1.jpg" alt="Vijayabhaskar V" class="profile-img"
+             onerror="this.style.display='none'" />
+        <div class="profile-placeholder">VB</div>
+      </div>
+      <div class="float-chip c1">🤖 LangChain</div>
+      <div class="float-chip c2">☁ AWS</div>
+      <div class="float-chip c3">🔥 TensorFlow</div>
+      <div class="float-chip c4">⚡ PySpark</div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <div class="marquee-bar">
+    <div class="marquee-inner">
+      <span>Python</span><em>✦</em>
+      <span>Machine Learning</span><em>✦</em>
+      <span>Deep Learning</span><em>✦</em>
+      <span>LangChain</span><em>✦</em>
+      <span>PySpark</span><em>✦</em>
+      <span>TensorFlow</span><em>✦</em>
+      <span>AWS</span><em>✦</em>
+      <span>Power BI</span><em>✦</em>
+      <span>NLP</span><em>✦</em>
+      <span>RAG Systems</span><em>✦</em>
+      <span>Databricks</span><em>✦</em>
+      <span>MLflow</span><em>✦</em>
+      <!-- duplicate -->
+      <span>Python</span><em>✦</em>
+      <span>Machine Learning</span><em>✦</em>
+      <span>Deep Learning</span><em>✦</em>
+      <span>LangChain</span><em>✦</em>
+      <span>PySpark</span><em>✦</em>
+      <span>TensorFlow</span><em>✦</em>
+      <span>AWS</span><em>✦</em>
+      <span>Power BI</span><em>✦</em>
+      <span>NLP</span><em>✦</em>
+      <span>RAG Systems</span><em>✦</em>
+      <span>Databricks</span><em>✦</em>
+      <span>MLflow</span><em>✦</em>
+    </div>
+  </div>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="sec-label reveal">— About Me</div>
+      <div class="about-grid">
+        <div class="about-text-col">
+          <h2 class="sec-title reveal">
+            Data Science & AI Enthusiast<br><em>building the future.</em>
+          </h2>
+          <p class="body-text reveal">
+            I am passionate about building intelligent systems and scalable data-driven solutions.
+            My interests span Artificial Intelligence, Data Science, Data Engineering, and Cloud
+            Technologies — developing models that learn from data and solve real-world problems.
+          </p>
+          <p class="body-text reveal">
+            I enjoy working across the full data pipeline — from preprocessing and feature engineering
+            to model development, evaluation, and deployment. I have hands-on experience with
+            Python-based ML frameworks, deep learning techniques, and AI-driven applications.
+          </p>
+          <p class="body-text reveal">
+            Alongside model development, I explore Data Engineering and Cloud technologies, designing
+            efficient data pipelines, managing large-scale datasets, and deploying ML solutions
+            in production environments.
+          </p>
+          <div class="about-stats reveal">
+            <div class="astat">
+              <span class="astat-n" data-t="10">0</span><span class="astat-u">+</span>
+              <span class="astat-l">AI Projects</span>
+            </div>
+            <div class="astat">
+              <span class="astat-n" data-t="3">0</span><span class="astat-u"></span>
+              <span class="astat-l">Internships</span>
+            </div>
+            <div class="astat">
+              <span class="astat-n" data-t="6">0</span><span class="astat-u">+</span>
+              <span class="astat-l">Certifications</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-img-col reveal-right">
+          <div class="about-frame">
+            <img src="assets/profile1.jpg" alt="Vijayabhaskar"
+                 onerror="this.style.display='none'" />
+            <div class="about-placeholder">VB</div>
+            <div class="about-deco"></div>
+          </div>
+          <div class="about-info-card">
+            <div class="info-row"><span class="info-k">Degree</span><span class="info-v">B.Tech AI & DS</span></div>
+            <div class="info-row"><span class="info-k">College</span><span class="info-v">SVCE</span></div>
+            <div class="info-row"><span class="info-k">Grad</span><span class="info-v">May 2026</span></div>
+            <div class="info-row"><span class="info-k">Location</span><span class="info-v">Tamil Nadu, IN</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SKILLS ══════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="sec-label reveal">— My Toolkit</div>
+      <h2 class="sec-title reveal">Skills & <em>Technologies.</em></h2>
+      <div class="skills-grid">
+
+        <div class="sk-card reveal" style="--d:0s">
+          <div class="sk-icon">🧠</div>
+          <h3>Core Competencies</h3>
+          <div class="sk-tags">
+            <span>Machine Learning</span><span>Deep Learning</span>
+            <span>NLP</span><span>MLflow</span><span>Web Scraping</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.07s">
+          <div class="sk-icon">🤖</div>
+          <h3>Artificial Intelligence</h3>
+          <div class="sk-tags">
+            <span>LangChain</span><span>LangGraph</span>
+            <span>Vector Databases</span><span>OpenCV</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.14s">
+          <div class="sk-icon">🔬</div>
+          <h3>Frameworks & Libraries</h3>
+          <div class="sk-tags">
+            <span>Scikit-learn</span><span>TensorFlow/Keras</span>
+            <span>NumPy</span><span>Pandas</span>
+            <span>Streamlit</span><span>Flask</span><span>PyQt5</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.21s">
+          <div class="sk-icon">⚙️</div>
+          <h3>Data Engineering</h3>
+          <div class="sk-tags">
+            <span>PySpark</span><span>SparkSQL</span>
+            <span>Linux</span><span>Airflow</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.28s">
+          <div class="sk-icon">☁️</div>
+          <h3>Cloud</h3>
+          <div class="sk-tags">
+            <span>AWS</span><span>Databricks</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.35s">
+          <div class="sk-icon">🗄️</div>
+          <h3>Databases</h3>
+          <div class="sk-tags">
+            <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.42s">
+          <div class="sk-icon">📊</div>
+          <h3>Data Analysis & Viz</h3>
+          <div class="sk-tags">
+            <span>Excel</span><span>Power BI</span><span>Tableau</span>
+            <span>Matplotlib</span><span>Seaborn</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.49s">
+          <div class="sk-icon">💻</div>
+          <h3>Programming</h3>
+          <div class="sk-tags">
+            <span>Python</span><span>Java</span><span>C</span>
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="sk-card reveal" style="--d:0.56s">
+          <div class="sk-icon">🛠️</div>
+          <h3>Dev Tools</h3>
+          <div class="sk-tags">
+            <span>Git</span><span>GitHub</span><span>VS Code</span><span>KNIME</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EXPERIENCE ══════════ -->
+  <section id="experience" class="section exp-section">
+    <div class="container">
+      <div class="sec-label reveal">— Work Experience</div>
+      <h2 class="sec-title reveal">Internships & <em>Roles.</em></h2>
+
+      <div class="exp-timeline">
+
+        <div class="exp-card reveal" style="--d:0s">
+          <div class="exp-header">
+            <div class="exp-num">01</div>
+            <div>
+              <h3 class="exp-title">Data Scientist Intern</h3>
+              <span class="exp-company">EvoAstra Ventures</span>
+            </div>
+            <div class="exp-badge">Internship</div>
+          </div>
+          <p class="exp-desc">
+            Led data science projects focused on web scraping and image captioning, utilizing Python
+            and deep learning models to transform raw data into actionable insights. Built robust
+            data extraction pipelines and functional captioning solutions, delivering high-quality
+            structured datasets. Developed leadership skills — managing a technical team, breaking
+            down complex workflows, and conducting rigorous code reviews.
+          </p>
+          <div class="exp-cert">
+            <img src="assets/certificates/evoastra.jpg" alt="EvoAstra Certificate"
+                 onerror="this.parentElement.style.display='none'" />
+          </div>
+        </div>
+
+        <div class="exp-card reveal" style="--d:0.1s">
+          <div class="exp-header">
+            <div class="exp-num">02</div>
+            <div>
+              <h3 class="exp-title">Data Science Intern</h3>
+              <span class="exp-company">CodeNatives</span>
+            </div>
+            <div class="exp-badge">Internship</div>
+          </div>
+          <p class="exp-desc">
+            Focused on the core analytical lifecycle — performing data preprocessing, exploratory
+            data analysis, and feature engineering using Python and Pandas. Transformed raw, messy
+            data into reliable datasets and predictive insights, providing the team with clear visual
+            reports that improved model accuracy and supported data-driven decision-making.
+          </p>
+          <div class="exp-cert">
+            <img src="assets/certificates/codenatives.jpg" alt="CodeNatives Certificate"
+                 onerror="this.parentElement.style.display='none'" />
+          </div>
+        </div>
+
+        <div class="exp-card reveal" style="--d:0.2s">
+          <div class="exp-header">
+            <div class="exp-num">03</div>
+            <div>
+              <h3 class="exp-title">Machine Learning Intern</h3>
+              <span class="exp-company">Novitech R&D Private Limited</span>
+            </div>
+            <div class="exp-badge">Internship</div>
+          </div>
+          <p class="exp-desc">
+            Gained comprehensive experience across classical ML and deep learning architectures.
+            Implemented a variety of algorithms — from regression and tree-based models to neural
+            networks — solving real-world problems. Mastered model selection, hyperparameter tuning,
+            and performance evaluation with rigorous data-driven validation.
+          </p>
+          <div class="exp-cert">
+            <img src="assets/certificates/novitech.jpg" alt="Novitech Certificate"
+                 onerror="this.parentElement.style.display='none'" />
+          </div>
+        </div>
+
+      </div>
+
+      <p class="link-note reveal">
+        All internship certificates →
+        <a href="https://drive.google.com/drive/folders/1yAEZnHenhKANjnvcVAL7eRYmhFQI36hg?usp=sharing"
+           target="_blank">View Certificate Folder ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ PROJECTS ══════════ -->
+  <section id="projects" class="section proj-section">
+    <div class="container">
+      <div class="sec-label reveal">— What I've Built</div>
+      <h2 class="sec-title reveal">Selected <em>Projects.</em></h2>
+      <p class="sec-sub reveal">
+        Projects spanning AI, Data Science, Machine Learning, Deep Learning, and Data Visualization —
+        all focused on practical, real-world problem solving.
+      </p>
+
+      <!-- AI Projects -->
+      <div class="proj-category reveal">
+        <div class="proj-cat-label">
+          <span class="cat-icon">🤖</span> AI Projects
+        </div>
+        <div class="proj-grid">
+          <div class="proj-card" style="--d:0s">
+            <div class="proj-num">01</div>
+            <h4>AI Book Assistant</h4>
+            <p>Retrieval-Augmented Generation system capable of answering book-related queries using vector search.</p>
+            <div class="proj-stack"><span>RAG</span><span>LangChain</span><span>Vector DB</span></div>
+          </div>
+          <div class="proj-card" style="--d:0.05s">
+            <div class="proj-num">02</div>
+            <h4>AI Document Assistant</h4>
+            <p>Intelligent multi-document retrieval system for querying across multiple documents simultaneously.</p>
+            <div class="proj-stack"><span>LangChain</span><span>NLP</span><span>Python</span></div>
+          </div>
+          <div class="proj-card" style="--d:0.1s">
+            <div class="proj-num">03</div>
+            <h4>AI Document Summarizer</h4>
+            <p>NLP system that summarizes large documents into concise, structured insights.</p>
+            <div class="proj-stack"><span>NLP</span><span>Transformers</span><span>Streamlit</span></div>
+          </div>
+          <div class="proj-card" style="--d:0.15s">
+            <div class="proj-num">04</div>
+            <h4>AI Spotify System</h4>
+            <p>AI-powered music recommendation system using collaborative and content-based filtering.</p>
+            <div class="proj-stack"><span>ML</span><span>Spotify API</span><span>Python</span></div>
+          </div>
+          <div class="proj-card" style="--d:0.2s">
+            <div class="proj-num">05</div>
+            <h4>Medical Chatbot</h4>
+            <p>Pinecone + Groq powered RAG chatbot for medical query resolution with accurate retrieval.</p>
+            <div class="proj-stack"><span>Pinecone</span><span>Groq</span><span>RAG</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Science Projects -->
+      <div class="proj-category reveal">
+        <div class="proj-cat-label">
+          <span class="cat-icon">📊</span> Data Science Projects
+        </div>
+        <div class="proj-grid">
+          <div class="proj-card" style="--d:0s">
+            <div class="proj-num">01</div>
+            <h4>Common Disease Prediction System</h4>
+            <p>ML system predicting diseases and suggesting treatments based on symptom input patterns.</p>
+            <div class="proj-stack"><span>ML</span><span>Scikit-learn</span><span>Streamlit</span></div>
+          </div>
+          <div class="proj-card" style="--d:0.05s">
+            <div class="proj-num">02</div>
+            <h4>Interactive Data Analysis App</h4>
+            <p>Streamlit tool for dataset upload, filtering, transformation, and dynamic visualization.</p>
+            <div class="proj-stack"><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ML & DL Projects -->
+      <div class="proj-category reveal">
+        <div class="proj-cat-label">
+          <span class="cat-icon">🔬</span> Machine Learning & Deep Learning
+        </div>
+        <div class="proj-grid">
+          <div class="proj-card" style="--d:0s">
+            <div class="proj-num">01</div>
+            <h4>NLP Projects Suite</h4>
+            <p>Human vs AI text detection, sentiment analysis, and spam detection systems.</p>
+            <div class="proj-stack"><span>NLP</span><span>BERT</span><span>Scikit-learn</span></div>
+          </div>
+          <div class="proj-card" style="--d:0.05s">
+            <div class="proj-num">02</div>
+            <h4>Recommendation Systems</h4>
+            <p>Anime, Books, Movies and Spotify recommendation engines using collaborative filtering.</p>
+            <div class="proj-stack"><span>CF</span><span>Cosine Sim</span><span>Python</span></div>
+          </div>
+          <div class="proj-card" style="--d:0.1s">
+            <div class="proj-num">03</div>
+            <h4>Medical Deep Learning</h4>
+            <p>Pneumonia, Brain Tumor, and Diabetic Retinopathy detection using CNN architectures.</p>
+            <div class="proj-stack"><span>CNN</span><span>Keras</span><span>OpenCV</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboards -->
+      <div class="proj-category reveal">
+        <div class="proj-cat-label">
+          <span class="cat-icon">📈</span> Data Visualization Dashboards
+        </div>
+        <p class="dash-sub">
+          Experienced in data preprocessing, transformation, and reduction techniques
+          with interactive dashboard development in Excel and Power BI.
+        </p>
+
+        <h4 class="dash-tool-label">Excel Dashboards</h4>
+        <div class="dash-gallery">
+          <div class="dash-item"><img src="assets/dashboards/1.png" alt="Dashboard 1" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">01</div></div>
+          <div class="dash-item"><img src="assets/dashboards/2.png" alt="Dashboard 2" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">02</div></div>
+          <div class="dash-item"><img src="assets/dashboards/3.png" alt="Dashboard 3" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">03</div></div>
+          <div class="dash-item"><img src="assets/dashboards/4.png" alt="Dashboard 4" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">04</div></div>
+          <div class="dash-item"><img src="assets/dashboards/5.png" alt="Dashboard 5" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">05</div></div>
+        </div>
+
+        <h4 class="dash-tool-label">Power BI Dashboards</h4>
+        <div class="dash-gallery">
+          <div class="dash-item"><img src="assets/dashboards/6.png" alt="Dashboard 6" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">06</div></div>
+          <div class="dash-item"><img src="assets/dashboards/7.png" alt="Dashboard 7" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">07</div></div>
+          <div class="dash-item"><img src="assets/dashboards/8.png" alt="Dashboard 8" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">08</div></div>
+          <div class="dash-item"><img src="assets/dashboards/9.png" alt="Dashboard 9" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">09</div></div>
+          <div class="dash-item"><img src="assets/dashboards/10.png" alt="Dashboard 10" loading="lazy" onerror="this.parentElement.classList.add('no-img')"><div class="dash-num">10</div></div>
+        </div>
+      </div>
+
+      <p class="link-note reveal">
+        All project files →
+        <a href="https://github.com/vijayabhaskarvb/PROJECTS" target="_blank">GitHub Repository ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ CERTIFICATIONS ══════════ -->
+  <section id="certifications" class="section cert-section">
+    <div class="container">
+      <div class="sec-label reveal">— Credentials</div>
+      <h2 class="sec-title reveal">Certifications.</h2>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal" style="--d:0s">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/excel.jpg" alt="Advanced Excel"
+                 onerror="this.parentElement.classList.add('no-img')" loading="lazy" />
+            <div class="cert-overlay">View ↗</div>
+          </div>
+          <h4>Advanced Excel</h4>
+        </div>
+        <div class="cert-card reveal" style="--d:0.07s">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/aws_cloud_practitioner.png" alt="AWS Cloud Practitioner"
+                 onerror="this.parentElement.classList.add('no-img')" loading="lazy" />
+            <div class="cert-overlay">View ↗</div>
+          </div>
+          <h4>AWS Cloud Practitioner</h4>
+        </div>
+        <div class="cert-card reveal" style="--d:0.14s">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/data_engineering.png" alt="Data Engineering"
+                 onerror="this.parentElement.classList.add('no-img')" loading="lazy" />
+            <div class="cert-overlay">View ↗</div>
+          </div>
+          <h4>Data Engineering</h4>
+        </div>
+        <div class="cert-card reveal" style="--d:0.21s">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/data_analysis.jpg" alt="Data Analysis"
+                 onerror="this.parentElement.classList.add('no-img')" loading="lazy" />
+            <div class="cert-overlay">View ↗</div>
+          </div>
+          <h4>Data Analysis</h4>
+        </div>
+        <div class="cert-card reveal" style="--d:0.28s">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/data_science.jpg" alt="Data Science"
+                 onerror="this.parentElement.classList.add('no-img')" loading="lazy" />
+            <div class="cert-overlay">View ↗</div>
+          </div>
+          <h4>Data Science</h4>
+        </div>
+        <div class="cert-card reveal" style="--d:0.35s">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/deep_learning.png" alt="Deep Learning"
+                 onerror="this.parentElement.classList.add('no-img')" loading="lazy" />
+            <div class="cert-overlay">View ↗</div>
+          </div>
+          <h4>Deep Learning</h4>
+        </div>
+      </div>
+
+      <p class="link-note reveal">
+        All course certificates →
+        <a href="https://drive.google.com/drive/folders/13pcTE3dhaFbMedwwBCy0_kskonNWgM0j?usp=sharing"
+           target="_blank">View Certificate Folder ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ EDUCATION ══════════ -->
+  <section id="education" class="section edu-section">
+    <div class="container">
+      <div class="sec-label reveal">— Academic Background</div>
+      <h2 class="sec-title reveal">Education.</h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal" style="--d:0s">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-badge">Current</div>
+          <h3>B.Tech – Artificial Intelligence & Data Science</h3>
+          <p class="edu-college">Sri Venkateswara College of Engineering</p>
+          <p class="edu-year">Expected Graduation: May 2026</p>
+        </div>
+        <div class="edu-card reveal" style="--d:0.1s">
+          <div class="edu-icon">📚</div>
+          <div class="edu-badge completed">Completed</div>
+          <h3>Higher Secondary – Computer Science</h3>
+          <p class="edu-college">A.K.T Academy Matric Higher Secondary School</p>
+          <p class="edu-year">Completed: May 2022</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="sec-label">— Get In Touch</div>
+        <h2 class="sec-title">Let's <em>connect.</em></h2>
+        <p class="contact-sub">
+          Open to internships, full-time roles, research collaborations, and freelance projects.
+          Feel free to reach out!
+        </p>
+
+        <div class="contact-details">
+          <a href="mailto:v.vijayabhaskarvb2005@gmail.com" class="contact-item">
+            <span class="ci-icon">✉</span>
+            <span>v.vijayabhaskarvb2005@gmail.com</span>
+          </a>
+          <a href="tel:8754352463" class="contact-item">
+            <span class="ci-icon">📱</span>
+            <span>+91 8754352463</span>
+          </a>
+        </div>
+
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/vijayabhaskar-v-ba3055286/" target="_blank" class="social-btn">
+            <span>in</span> LinkedIn
+          </a>
+          <a href="https://github.com/vijayabhaskarvb" target="_blank" class="social-btn">
+            <span>⌥</span> GitHub
+          </a>
+          <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank" class="social-btn">
+            <span>💼</span> Naukri
+          </a>
+          <a href="https://www.instagram.com/v.vijaya_bhaskar" target="_blank" class="social-btn">
+            <span>◈</span> Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <span class="nav-logo">VB<span class="logo-dot">.</span></span>
+      <p>© 2025 Vijayabhaskar V ·</p>
+      <a href="#hero" class="back-top">↑ Back to Top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
